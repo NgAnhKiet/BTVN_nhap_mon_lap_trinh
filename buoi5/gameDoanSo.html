@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getPlay();" > Chơi </button>
+    
+      <script>
+        
+          function getPlay() {
+               let nhapthap = parseInt(prompt("Guess the lowest random number"));
+               let thapnhat = Math.floor(Math.random()*nhapthap);
+               console.log(thapnhat);
+  
+               let nhapcao1 = parseInt(prompt("Guess the highest random number"));
+               let nhapcao2 = parseInt(prompt("Guess the lowest random number"));
+               
+               let caonhat =  Math.floor(Math.random()*nhapcao2)+nhapcao1 ; 
+               console.log(caonhat);
+               for (let luot = 0; luot <= 2; luot++) {
+                let dudoan = parseInt( prompt("Guess the number"));
+                 if (dudoan==nhapcao1 || dudoan==nhapcao2 || dudoan == nhapthap) {
+                  alert("chọn số ban đầu rồi ");
+                }
+                  if (dudoan==thapnhat) {
+                if (dudoan==caonhat) {
+                  alert("U win");
+                }
+              }
+              if (dudoan!=thapnhat) {
+                if (dudoan!=caonhat) {
+                  alert("U lose");
+                }
+              }
+              if (dudoan==thapnhat) {
+                if (dudoan!=caonhat) {
+                  alert("So close");
+                }
+                  }
+                  if (dudoan!=thapnhat) {
+                if (dudoan==caonhat) {
+                  alert("So close");
+                }
+                  }
+               }
+                 
+            
+                }
+          </script>
+</body>
+</html>
